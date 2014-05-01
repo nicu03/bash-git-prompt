@@ -1,4 +1,4 @@
-local Time12a="\$(date +%H:%M)"
+local Time12a="\$(date +%H:%M:%S)"
 local PathShort="\w"
 
 # These are the color definitions used by gitprompt.sh
@@ -16,10 +16,11 @@ GIT_PROMPT_UNTRACKED="${Cyan}…"       # the number of untracked files/dirs
 GIT_PROMPT_STASHED="${BoldBlue}⚑"     # the number of stashed files/dir
 GIT_PROMPT_CLEAN="${BoldGreen}✔"      # a colored flag indicating a "clean" repo
 
-GIT_PROMPT_START_USER="${Yellow}${PathShort}${ResetColor}"
-GIT_PROMPT_START_ROOT="${Yellow}${PathShort}${ResetColor}"
-GIT_PROMPT_END_USER=" \n${White}${Time12a}${ResetColor} $ "
-GIT_PROMPT_END_ROOT=" \n${White}${Time12a}${ResetColor} # "
+GIT_PROMPT_START_USER="╔═╡${Yellow}${PathShort}${ResetColor}"
+GIT_PROMPT_START_ROOT="${Red}╔═╡${Yellow}${PathShort}${ResetColor}"
+GIT_PROMPT_END_USER=" \n╙{${White}${Time12a}◷ ${ResetColor}}${Blue}$ ${ResetColor}"
+GIT_PROMPT_END_ROOT=" \n${Red}╙{${White}${Time12a}◷ ${Red}}─\u↦ # ${ResetColor}"
+
 
 # Please do not add colors to these symbols
 GIT_PROMPT_SYMBOLS_AHEAD="↑·"         # The symbol for "n versions ahead of origin"
