@@ -16,7 +16,7 @@ GIT_PROMPT_UNTRACKED="${Cyan}…"       # the number of untracked files/dirs
 GIT_PROMPT_STASHED="${BoldBlue}⚑"     # the number of stashed files/dir
 GIT_PROMPT_CLEAN="${BoldGreen}✔"      # a colored flag indicating a "clean" repo
 
-GIT_PROMPT_START_USER="╔═╡${Yellow}${PathShort}${ResetColor}"
+GIT_PROMPT_START_USER="\n╔═╡${Yellow}${PathShort}${ResetColor}"
 GIT_PROMPT_START_ROOT="${Red}╔═╡${Yellow}${PathShort}${ResetColor}"
 GIT_PROMPT_END_USER=" \n╙{${White}${Time12a}◷ ${ResetColor}}${Blue}$ ${ResetColor}"
 GIT_PROMPT_END_ROOT=" \n${Red}╙{${White}${Time12a}◷ ${Red}}─\u↦ # ${ResetColor}"
